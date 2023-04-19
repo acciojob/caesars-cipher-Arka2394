@@ -12,7 +12,7 @@ function rot13(encodedStr) {
   let decodedArr = [];
   for (let i = 0; i < encodedStr.length; i++) {
     let char = encodedStr[i];
-    let decodedChar = lookup[char] || char;
+    let decodedChar = lookup[char] || char; // Use lookup table to get decoded character, or keep non-alphabetic characters unchanged
     decodedArr.push(decodedChar);
   }
   return decodedArr.join('');
